@@ -1,0 +1,94 @@
+#!/usr/bin/python3
+#  -*- coding: utf-8 -*-
+# Date: Thu 13 April 2021 17:02:27 CET
+# Author: Marina Mougammadaly
+# Description:
+# Python Version 3.9
+# ECAM - EENG 1 - Zoltar Project
+
+# Should we create several list about: career, healt love life, family
+
+# It seems long to create all these def, there is maybe a faster way of coding. There are a lot of possible answers  
+# The main def is type_of_questions, it will all begin from there
+	# 1. type_of_questions
+	# 2. career_questions(); friends_questions(); love_questions(); family_questions()
+	# 3. Q1_career_questions(); Q2_career_questions; ... [HAVE TO CONTINUE IT]
+	# 4. 
+
+print("Welcome to the Zoltar Machine. Ask your question and we will predict your future.")
+
+# Def for Career questions. Is called in def career_questions(). It will ask several questions and the user will have several choices to answer
+
+def Q1_career_questions(): #What work path or career am I most suited to?"
+
+	print
+
+def Q2_career_questions(): #"When will I find a job?"
+
+def Q3_career_questions(): #"Is it a good idea for me to start my own business?"
+
+# Def for Friends questions. Is called in def friends_questions()
+	# TASKS TO DO: Create the different defs for each questions
+
+# Def for Love questions. Is called in def love_questions()
+	# TASKS TO DO: Create the different defs for each questions
+
+# Def for Family Questions. Is called in def family_questions()
+	# TASKS TO DO: Create the different defs for each questions
+
+
+
+# Def to print the different types of questions. These def are in def type_of_questions()
+	#Tasks to do: Write all the questions and put it in the lists
+
+def career_questions():
+	career_questions = ["What work path or career am I most suited to?", "When will I find a job?", "Is it a good idea for me to start my own business?"]
+	usr_career_ans = str(input('\n'.join(career_questions),"Answer by Q1, Q2 or Q3")) #\n: line break;
+	if user_answer == "Q1":
+		#Create a def " Q1_career_questions" before this one with the list of questions to ask about it and call the def here
+		# or if it's better, ask the question directly here instead of creating lists
+		Q1_career_questions()
+	elif user_answer == "Q2":
+		Q2_career_questions()
+
+	elif user_answer == "Q3":
+		Q3_career_questions()
+
+def friends_questions():
+	friends_questions = []
+	print('\n'.join(friends_questions))
+
+def love_questions():
+	love_questions = []
+	print('\n'.join(love_questions))
+
+def family_questions():
+	family_questions= []
+	print('\n'.join(family_questions))
+
+
+
+# Def to know what thype of qestions the user needs informations
+def type_of_questions():
+
+	print("On which subjet do you want to have some answers? ")
+	user_answer = str(input("Choose between Career, Friends, Love or Family")) 
+	if user_answer == "Career":
+		print("What is your question?")
+		career_questions() # def called here to read the code easily. The Career def is called 
+
+	elif user_answer == "Friends":
+		print("What is your question?")
+		friends_questions() # def called here to read the code easily
+
+	elif user_answer == "Love":
+		print("What is your question?")
+		love_questions() # def called here to read the code easily
+
+	else:
+		print("What is your question?")
+		family_questions() # def called here to read the code easily
+
+
+# Where we call the mains def	
+type_of_questions()

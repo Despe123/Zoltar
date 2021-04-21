@@ -1,0 +1,166 @@
+#!/usr/bin/python3
+#  -*- coding: utf-8 -*-
+# Date of begin: Thu 13 April 2021 17:02:27 CET
+# Last update: Wed 21 April 2021
+# Author: Marina Mougammadaly
+# Description:
+# Python Version 3.9
+# ECAM - EENG 1 - Zoltar Project
+
+# Should we create several list about: career, healt love life, family
+
+# It seems long to create all these def, there is maybe a faster way of coding. There are a lot of possible answers  
+# The main def is type_of_questions, it will all begin from there
+	# 1. type_of_questions
+	# 2. career_questions(); friends_questions(); love_questions(); family_questions()
+	# 3. Q1_career_questions(); Q2_career_questions; ... [HAVE TO CONTINUE IT]
+	# 4. 
+
+print("Welcome to the Zoltar Machine. Ask your question and we will predict your future.")
+
+# Def for Career questions. Is called in def career_questions(). It will ask several questions and the user will have several choices to answer
+
+def Q1_career_questions(): #What work path or career am I most suited to?"  (Create more questions about it later)
+
+	print("How do you define your personality?")
+	ans_1_career = str(input(''.join("Answer by: Creative, Leader, Communicative")))
+	
+	if ans_1_career == "Creative":
+		print("You should work in a domain which let you express yourself. As example you could look for being a designer, a painter, writer or any jobs which let you express your art.")
+	elif ans_1_career == "Leader":
+		print("You seem to have a good sens to lead people, you will be able to be a team leader, a DRH or even a director.")
+	elif ans_1_career == "Communicative":
+		print("You like to be in contact with people, you could work in health care, with kids or even a comunity manager")
+
+def Q2_career_questions(): #"When will I find a job?"
+	
+	print("Are you still studiing?")
+	ans_2_career = str(input(''.join("Answer by:Yes or No")))
+
+	if ans_2_career == "Yes" or "yes":
+		print("When you will finish your studies you will directly find a job, it might be not your dream job but it will help you to find it.")
+	elif ans_2_career == "No" or "no":
+		print("You are currently looking for a job, you have to continue in this way, you will find it soon if you are determinate.")
+
+
+def Q3_career_questions(): #"Is it a good idea for me to start my own business?"
+
+	print("Do you have an idea of a business to start?")
+	ans_3_career = str(input(''.join("Answer by:Yes or No")))
+	if ans_3_career == "Yes" or "yes":
+		ans = str(input(''.join("Do you really want to start it? Answer by Yes or No")))
+
+		if ans == "Yes":
+			print("If you want it, you should start it. YOur determination will help you even against difficulties.")
+		else:
+			print("For the moment it seems that you are not ready to start your business. If you answered no because you don't know how to create a business you should ask someone. It's okay to doubt, you will soon find how to start your business")
+	elif ans_3_career == "No" or "no":
+		print("You should  not start something if you don't know on what. Don't precipitate yourself. Wait to have an idea.")
+
+
+# Def for Friends questions. Is called in def friends_questions()
+	# TASKS TO DO: Create the different defs for each questions
+
+def Q1_friends_question(): #  "Will I keep along with my friends?"
+
+def Q2_friends_questions(): # "Will I make some new friends?"
+
+def Q3_friends_questions():
+
+# Def for Love questions. Is called in def love_questions()
+	# TASKS TO DO: Create the different defs for each questions
+
+def Q1_love_question(): # "Will I find love?"
+
+def Q2_love_questions(): # "When will I find love?"
+
+def Q3_love_questions():
+
+
+# Def for Family Questions. Is called in def family_questions()
+	# TASKS TO DO: Create the different defs for each questions
+
+def Q1_family_question(): # "Will my family be okay?"
+
+def Q2_family_questions():
+
+def Q3_family_questions():
+
+
+
+
+# Def to print the different types of questions. These def are in def type_of_questions()
+	#Tasks to do: Write all the questions and put it in the lists
+
+def career_questions():
+	career_questions = ["Q1: What work path or career am I most suited to?", "Q2: When will I find a job?", "Q3: Is it a good idea for me to start my own business?"]
+	print("Answer by Q1, Q2 or Q3")
+	usr_career_ans = str(input('\n'.join(career_questions))) #\n: line break;
+
+	if usr_career_ans == "Q1":
+		Q1_career_questions()
+	elif usr_career_ans == "Q2":
+		Q2_career_questions()
+	elif usr_career_ans == "Q3":
+		Q3_career_questions()
+
+def friends_questions():
+	friends_questions = ["Will I keep along with my friends?", "Will I make some new friends?", ""]
+	print("Answer by Q1, Q2 or Q3")
+	usr_friends_ans = str(input('\n'.join(friends_questions)))
+
+	if usr_friends_ans == "Q1":
+		Q1_friends_questions()
+	elif usr_friends_ans == "Q2":
+		Q2_friends_questions()
+	elif usr_friends_ans == "Q3":
+		Q3_friends_questions()
+
+def love_questions():
+	love_questions = ["Will I find love?", "When will I find love? ", ""]
+	print("Answer by Q1, Q2 or Q3")
+	usr_love_ans = str(input('\n'.join(love_questions)))
+	if usr_love_ans == "Q1":
+		Q1_love_questions()
+	elif usr_love_ans == "Q2":
+		Q2_love_questions()
+	elif usr_love_ans == "Q3":
+		Q3_love_questions()
+
+def family_questions():
+	family_questions= ["Will my family be okay?","",""]
+	print("Answer by Q1, Q2 or Q3")
+	usr_family_questions = str(input('\n'.join(family_questions)))
+	if usr_family_ans == "Q1":
+		Q1_family_questions()
+	elif usr_family_ans == "Q2":
+		Q2_family_questions()
+	elif usr_family_ans == "Q3":
+		Q3_family_questions()
+
+
+
+# Def to know what thype of qestions the user needs informations
+def type_of_questions():
+
+	print("On which subjet do you want to have some answers? ")
+	user_answer = str(input("Choose between Career, Friends, Love or Family")) 
+	if user_answer == "Career":
+		print("What is your question?")
+		career_questions() # def called here to read the code easily. The Career def is called 
+
+	elif user_answer == "Friends":
+		print("What is your question?")
+		friends_questions() # def called here to read the code easily
+
+	elif user_answer == "Love":
+		print("What is your question?")
+		love_questions() # def called here to read the code easily
+
+	else:
+		print("What is your question?")
+		family_questions() # def called here to read the code easily
+
+
+# Where we call the mains def	
+type_of_questions()

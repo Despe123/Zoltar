@@ -1,0 +1,25 @@
+{
+	
+	"career" : {
+		"word" : "career",
+		"Word_list" : ["dffd", "dfdf", "dfef"]
+	},
+
+	"futur" : {
+		"word" : "futur",
+		"Word_list" : [
+				"you will be millionaire",
+				"you will be married",
+				"you will die",
+				"you will be rich",
+				"you will be aaaahhhhh",
+				"you will be beeehhhhh"
+				]
+	},
+
+	"word" : {
+		"word" : "word",
+		"Word_list" : ["career", "futur", "family"]
+	}
+
+}

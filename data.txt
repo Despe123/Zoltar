@@ -1,0 +1,21 @@
+{ "word of the question": [
+	{
+	word : "career"
+	Word_list : ['dffd', 'dfdf', 'dfef']
+	}
+	{
+	word : "futur"
+	Word_list : ['dffd', 'dfdf', 'dfef']
+	}
+
+
+	{
+	word : "word"
+	Word_list : ['career', 'futur', 'dfef']
+	}
+
+
+
+
+]
+}

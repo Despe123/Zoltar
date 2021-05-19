@@ -3,24 +3,23 @@
 	"career" : {
 		"word" : "career",
 		"Word_list" : ["You will be an engineer",
-			       "You will be a chef in the GAFA"
-			       "“On ne choisit pas sa carrière ; elle s’empare de nous.”"
-			       "Be  curious: people who ask questions will have a better career"
-		  	       "You should work in a domain which let you express yourself. As example you could look for being a designer, a painter, writer or any jobs which let you express your art."
-			       "You seem to have a good sens to lead people, you will be able to be a team leader, a DRH or even a director."
-			       "You like to be in contact with people, you could work in health care, with kids or even a comunity manager"
-			       "When you will finish your studies you will directly find a job, it might be not your dream job but it will help you to find it."
-			       "You are currently looking for a job, you have to continue in this way, you will find it soon if you are determinate."
-			       "If you want to creat a business, you should start it. Your determination will help you even against difficulties."
-			       "For the moment it seems that you are not ready to start your business. It's okay to doubt, you will soon find how to start your business"
+			       "You will be a chef in the GAFA",
+			       "On ne choisit pas sa carrière ; elle s’empare de nous.",
+			       "Be  curious: people who ask questions will have a better career",
+		  	       "You should work in a domain which let you express yourself. As example you could look for being a designer, a painter, writer or any jobs which let you express your art.",
+			       "You seem to have a good sens to lead people, you will be able to be a team leader, a DRH or even a director.",
+			       "You like to be in contact with people, you could work in health care, with kids or even a comunity manager",
+			       "When you will finish your studies you will directly find a job, it might be not your dream job but it will help you to find it.",
+			       "You are currently looking for a job, you have to continue in this way, you will find it soon if you are determinate.",
+			       "If you want to creat a business, you should start it. Your determination will help you even against difficulties.",
+			       "For the moment it seems that you are not ready to start your business. It's okay to doubt, you will soon find how to start your business",
 			       "You should not start a business if you don't know on what. Don't precipitate yourself. Wait to have an idea."	
 			       ]
 	},
 
 	"futur" : {
 		"word" : "futur",
-		"Word_list" : [
-				"you will be millionaire",
+		"Word_list" : [	"you will be millionaire",
 				"you will be married",
 				"you will die",
 				"you will be rich",
@@ -29,40 +28,47 @@
 			        "Tomorow you will win at the loterry",
 			        "I can see in you you are someone really determine, you will invest in something really big, you will win a lot of money.",
 			        "You will ba an HAAS engineer ",
-				"I can feel something not good for you, you should change your way of thinking.",
+				"I can feel something not good for you, you should change your way of thinking."
 				]
 	},
 
 	"love" : {
 		"word" : "love",
-		"Word_list" : [
-				"you will find the perfect person",
+		"Word_list" : [	"you will find the perfect person",
 				"you will be married",
 				"you will have a good suprise during the week",
 				"Huum.. something bad will happen ",
 				"you will have a bad suprise during the week",
-				"Love never take a vacation, or it never comes back. ",
+				"Love never take a vacation, or it never comes back. "
 				]
 	},
 
 	"friends" : {
 		"word" : "friends",
-		"Word_list" : [
-				"All your friends will leave you",
+		"Word_list" : [	"All your friends will leave you",
 				"You will have a surprise birthday",
 				"you will have a good suprise during the week",
 				"Huum.. something bad will happen ",
-				"you will have a bad suprise during the week",
+				"you will have a bad suprise during the week"
 				]
 	},
 
 	"family" : {
 		"word" : "family",
-		"Word_list" : [
-				"I can feel you are someone who loves contact, You will have a big family",
+		"Word_list" : [	"I can feel you are someone who loves contact, You will have a big family",
 				"A terrible accident accident will happen",
 				"you will have a good suprise during the week, maybe your wife is pragnent",
-				"Huum.. something bad will happen ",
+				"Huum.. something bad will happen "
+				]
+	},
+
+
+	"alcool" : {
+		"word" : "alcool",
+		"Word_list" : [	"I can feel you are someone who loves contact, You will have a big family",
+				"A terrible accident will happen",
+				"you will have a good suprise during the week, maybe your wife is pragnent",
+				"Huum.. something bad will happen "
 				]
 	},
 
@@ -70,7 +76,8 @@
 
 	"word" : {
 		"word" : "word",
-		"Word_list" : ["career", "futur", "friends", "love", "family", ]
+		"Word_list" : ["career", "futur", "friends", "love", "family", " drunk", "ok"
+				]
 	}
 
 }

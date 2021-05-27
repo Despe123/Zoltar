@@ -1,0 +1,134 @@
+#!/usr/bin/python3
+#  -*- coding: utf-8 -*-
+# tweepy-bots/bots/autoreply.py
+
+# Date: Fri 21 May 2021 10:05:31 CEST
+# Author: Marina Mougammadaly
+# Last updated by: Marina Mougammadaly
+# Last updated date: Fri 21 May 2021 10:05:31 CEST
+# Description: Zoltar Project - ECAM - EENG 1
+
+
+# I have a problem with the tweepy functions (udpdate_status etc...), WHY maybe windows 
+import json
+import random
+import tweepy as tw # tweepy: used to tweet, retweet 
+import requests
+import config 
+import time
+#from Bot import random_bot
+import searchtweets
+from twitter_keys import keys
+#think to delete twitter.py file
+
+
+# Authenticate to Twitter
+	# created another file (a dictionnary) twitter_key.py
+
+CONSUMER_KEY = keys['consumer_key']
+CONSUMER_SECRET = keys['consumer_secret']
+#BEARER_TOKEN = keys['bearer_token']
+ACCESS_TOKEN = keys['access_token']
+ACCESS_TOKEN_SECRET = keys['access_token_secret']
+
+
+
+	#OAut:Open Authorization, allows third-party services to exchange your information without you having to give away your password
+	# auth – The authentication handler to be used
+auth = tw.OAuthHandler("CONSUMER_KEY", "CONSUMER_SECRET")
+auth.set_access_token("ACCESS_TOKEN", "ACCESS_TOKEN_SECRET")
+api = tw.API(auth, wait_on_rate_limit=True,wait_on_rate_limit_notify=True)
+
+# Create API object: #Setting wait_on_rate_limit and wait_on_rate_limit_notify to True makes the API object print a message and wait if the rate limit is exceeded:
+#api = tw.API(auth, wait_on_rate_limit=True,wait_on_rate_limit_notify=True)
+
+def write_tweet():
+	try:
+		message = "Welcome to the Zoltar Machine. Ask your question and we will predict your future."
+		
+		api.update_status(status= message) # Issue :	 [{'code': 89, 'message': 'Invalid or expired token.'}]
+		
+		print('I tweeted') 
+	except Exception as e :
+		print('Issue :\t', e)
+		
+	
+	
+def authentif():
+	
+	try:
+		api.verify_credentials()
+		print("Authentication OK")
+	except:
+		print("Error during authentification")
+authentif()
+
+def random_bot(twitter_question):
+	""" The random_bot function will open a json will where you will have a dictonary with all the key word use in the sentence (the input) and the coresponding anwser.
+		For exemple if in the input you have the word 'futur' it will take only the word 'futur' then go in the proper line in the json.file and will give you a random
+		answer that the computer will chose by itself."""
+	
+	f = open('data.json',encoding="utf8")
+
+	data = json.load(f)
+  
+	list_of_word = data['word']['Word_list']
+
+	f.close()
+
+	for i in list_of_word:
+		if i in random_bot(twitter_question):
+			return data[i]['Word_list'][random.randint(0, len(data[i]['Word_list'])-1)] 
+
+		
+# les deux premiers []= a la liste dans le json
+# tout le reste correspond a l indentation d un element de la liste de maniere aleatoire
+
+
+#Red Ranger PC Local test (Blue Ranger Please comment Following lines before working on Twitter API0
+#print("Welcome to the Zoltar Machine. Ask your question and we will predict your future.")
+#answer = str(input("enter your question:  "))
+#print(random_bot(answer))
+
+#logging.basicConfig(level=logging.INFO) # permits to reply to the good logger and @ them
+#logger = logging.getLogger()
+
+FILE = "id.txt"
+def retrieve_id(file): # search the id's
+	f_read = open(file)
+	last_seen_id = int(f_read.read().strip())
+	f_read.close()
+	return last_seen_id
+	print (last_seen_id)
+
+def store_id(id, file): # store the id's
+	f_write = open(file, 'w')
+	f_write.write(str(id))
+	f_write.close()
+	return
+
+def main():
+	try:
+		last_seen_id = retrieve_id(FILE) # search the id in the file id.txt
+		mentions = api.mentions_timeline(last_seen_id, tweet_mode= 'extended')
+
+		for mention in reversed(mentions):
+			reply = random_bot(mentions)
+				
+			last_seen_id = mention.id
+			store_id(last_seen_id, FILE)
+			api.update_status('@'+ mention.user.screen_name + reply, mention.id)
+			print('Replied to @' + mension.user.screen_name) # id: identification of users
+	
+	except Exception as e :
+		print('Issue :\t', e)
+		
+		 	
+	
+		
+# Call all the def
+write_tweet()
+#random_bot()
+main()
+retrieve_id(file= FILE)
+# 

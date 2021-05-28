@@ -63,17 +63,16 @@
 	},
 
 
-	"alcool" : {
-		"word" : "alcool",
-		"Word_list" : [	"I can feel you are someone who loves contact, You will have a big family",
-				"A terrible accident will happen",
-				"you will have a good suprise during the week, maybe your wife is pragnent",
-				"Huum.. something bad will happen "
+	"drunk" : {
+		"word" : "drunk",
+		"Word_list" : [	"Oh yeaah, I can see that tonight you will through up ",
+				"You will jump through a window",
+				"Try to avoid to mix alcools"
 				]
 	},
 
-
-
+	
+	
 	"word" : {
 		"word" : "word",
 		"Word_list" : ["career", "futur", "friends", "love", "family", " drunk", "ok"

@@ -72,11 +72,9 @@
 	},
 
 	
-	
 	"word" : {
 		"word" : "word",
-		"Word_list" : ["career", "futur", "friends", "love", "family", " drunk", "ok"
+		"Word_list" : ["career", "futur", "friends", "love", "family", "drunk" 
 				]
-	}
-
+	}  
 }
